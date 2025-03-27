@@ -1,0 +1,74 @@
+h1 {
+    margin: 0;
+}
+
+.display {
+	background-color: white;
+    border: none;
+    height: 78px;
+    font-size:60px;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+.mem {
+    text-align: center;
+    border: none;
+    border-radius: 0.4em;
+    height: 30px;
+    width: 70px;
+    font-size:24px;
+    margin: 5px;
+}
+
+.kboard{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr);
+    width: 1000px;
+    margin-left: 5px;
+}
+
+button {
+    text-align: center;
+    border: none;
+    border-radius: 0.4em;
+    height: 94px;
+    width: 240px;
+    font-size:48px;
+    margin: 5px;
+}
+.a_key {
+    background-color:whitesmoke;
+}
+
+#hist{
+    background-color: white;
+    border: none;
+    resize: none;
+    height: 630px;
+    font-size:24px;
+    width: 400px;
+}
+
+#mem{
+    background-color: white;
+    white-space: nowrap;
+    overflow-x: auto;
+    border: none;
+    resize: none;
+    height: 62px;
+    font-size:40px;
+    width: 300px;
+    float: left;
+}
+
+.htr{
+    text-align: center;
+    border: none;
+    border-radius: 0.4em;
+    height: 86px;
+    width: 86px;
+    margin: 5px;
+    margin-top: 0px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Stelletsky A.">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Калькулятор</title>
+</head>
+
+<body>
+
+    <div style="display: grid; justify-content: center; grid-template-columns: repeat(2,1fr);">
+
+        <!-- Калькулятор -->
+        <div>
+            <!-- Поле для вывода -->
+            <input id="display" class = "display" disabled value="0"></input>
+
+            <!-- Memory-->
+            <button class="mem" tabindex="-1" onclick="mem('MC')" style="margin-left: 10px;">MC</button tabindex="-1">
+            <button class="mem" tabindex="-1" onclick="mem('M-')">M-</button tabindex="-1">
+            <button class="mem"tabindex="-1" onclick="mem('M+')">M+</button tabindex="-1">
+
+            <!-- Кнопки ввода -->
+            <div class="kboard">
+                <button tabindex="-1" onclick="addvalue('perc')">%</button tabindex="-1">
+                <button tabindex="-1" onclick="clean('CE')">CE</button tabindex="-1">
+                <button tabindex="-1" onclick="clean('C')">C</button tabindex="-1">
+                <button tabindex="-1" onclick="del()">&#10232;</button tabindex="-1">
+
+                <button tabindex="-1" onclick="addvalue('del')"><span>&#8543;</span>x</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('sqr')">x&#178;</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('sqrt')">&#8730;x</button tabindex="-1">
+                <button tabindex="-1" class="a_key" onclick="addvalue('/')"><span>&#247;</span></button tabindex="-1">
+
+                <button tabindex="-1" onclick="addvalue('7')">7</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('8')">8</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('9')">9</button tabindex="-1">
+                <button tabindex="-1" class="a_key" onclick="addvalue('*')"><span>&#215;</span></button tabindex="-1">
+
+                <button tabindex="-1" onclick="addvalue('4')">4</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('5')">5</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('6')">6</button tabindex="-1">
+                <button tabindex="-1" class="a_key" onclick="addvalue('-')"><span>&#8722;</span></button tabindex="-1">
+
+                <button tabindex="-1" onclick="addvalue('1')">1</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('2')">2</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('3')">3</button tabindex="-1">
+                <button tabindex="-1" class="a_key" onclick="addvalue('+')"><span>&#43;</span></button tabindex="-1">
+
+                <button tabindex="-1" class="a_key" onclick="addvalue('neg')"><span>&#177;</span></button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('0')">0</button tabindex="-1">
+                <button tabindex="-1" onclick="addvalue('.')"><span>&#8729;</span></button tabindex="-1">
+                <button tabindex="-1" onclick="calculate()" style="background-color:rgb(0, 115, 255); color: #ffffff;"><span>&#61;</span></button tabindex="-1">
+            </div>
+        </div>
+        <!-- История -->
+         <div>
+            <span style="font-size:24px; display: inline-block; font-weight: bold;">Журнал</span>
+            <textarea id="hist" onclick="getLineNumber(this)" readonly="readonly" value=""></textarea>
+            <span style=" display: inline-block; height: 84px; width: 304px;;">
+                <h1 style="float: left; height: 24px; font-size: 24px; font-weight: bold;">Память</h1>
+                <textarea id="mem" onclick="mem('Click')" readonly="readonly" value=""></textarea>
+            </span>
+            <button style="float: right; clear: right;" tabindex="-1" class="htr" onclick="hclean()">&#128465</button tabindex="-1">
+         </div>
+    </div>
+</body>
+</html>
